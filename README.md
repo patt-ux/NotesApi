@@ -38,7 +38,7 @@
     * Run `npm install`
 6. Run the Server:
     * In the Command Prompt/Terminal window, to run the node server, type `node server.js`
-    * Windows machines may show a modal to ask for permission for the server to access the network - click OK
+    * Windows machines may show a modal to ask for permission for the server to access the network - click 'Allow Access'
     * If all goes well you should see `Listening on port 5000`
 
 ## Test the API
