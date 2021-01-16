@@ -147,7 +147,7 @@ You can delete all notes through the DELETE route `/api/notes`.
 5. You should see `[]` in the response indicating the database is empty
 
 ## Stopping the Server
-* While developing, you may need to stop the server. In both the terminal window press the CTRL and C keys at the same time (or CMD and C for Mac). Press again if necessary to stop all processes on the terminal. You may also attempt to close/kill the terminal application to stop the process.
+* While developing, you may need to stop the server. In the terminal window press the CTRL and C keys at the same time (or CMD and C for Mac). Press again if necessary to stop all processes on the terminal. You may also attempt to close/kill the terminal application to stop the process.
 
 ## Conclusion
 We've walked through how to set up the server, stop the server and all the available CRUD operations. You can now hook this up to a handsome front end application for some serious note taking. Although I would advise swapping out lowdb for something more robust like MongoDB or an RDBMS like MySQL.
