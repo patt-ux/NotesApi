@@ -116,6 +116,13 @@
         * For the url, enter `localhost:5000/api/notes/1` - we want to delete note id 1.
         * Click "Send"
         * You should see `note deleted` in the response
-
+6. Deleting all notes
+    * You may find it necessary to wipe out the database and start clean. You can do so through the DELETE route `/api/notes`
+    * In the Postman App, open a new tab.
+        * Set the method to `DELETE`
+        * For the url, enter `localhost:5000/api/notes` - we want to delete all notes.
+        * Click "Send"
+        * You should see `[]` the newly cleaned database, in the response
+        
 ## Stopping the Server
 * In both the server app terminal press the CTRL and C keys at the same time (or CMD and C for Mac). Press again if necessary to stop all processes on the terminal. You may also attempt to close/kill the terminal application to stop the process.
