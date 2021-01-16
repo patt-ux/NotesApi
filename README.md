@@ -159,8 +159,10 @@ You can delete all notes through the DELETE route `/api/notes`.
 
 ## Stopping the Server
 * While developing, you may need to stop the server.
-* In COMMAND PROMPT windows press the CTRL and C keys at the same time.
-* In a Terminal Window press the Apple CMD and C keys at the same time. 
+* WINDOWS USERS:
+    * In COMMAND PROMPT windows press the CTRL and C keys at the same time.
+* MAC USERS:
+    * In a Terminal Window press the Apple CMD and C keys at the same time. 
 * Press the keys again if necessary to stop all processes on the terminal.
 * You may also attempt to close/kill the terminal application to stop the process.
 
