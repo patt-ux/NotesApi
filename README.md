@@ -19,9 +19,8 @@
 1. You will Need to have Node installed.
     * You can download node from https://nodejs.org/en/ - this app is built on version 14.15.4
 2. To test the API, you will need an application capable of making POST, PUT and DELETE requests. If you already have something, use that. We will be using Postman to test the API in the following "Test the API" section.
-    * Sign up for PostMan at https://www.postman.com
     * Download the Postman app https://www.postman.com/downloads
-    * Launch the app and sign in.
+    * Launch the app and sign up/sign in.
 3. Clone or Download this repo from Github
 4. Install node modules:
     * In a terminal window, navigate to the root of this repo (e.g. C:/NotesApi)
