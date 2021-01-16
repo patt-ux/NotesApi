@@ -2,7 +2,7 @@
 * A no-frills, node based api for managing notes.
 * Built with Node, Express, LowDB to handle persisting and CRUD operations.
     * Each note has the properties id (integer), title (string), body (string):
-        * `{"id":0, "title":"A Title", "body": "A Body"}
+        * `{"id":0, "title":"A Title", "body": "A Body"}`
         * Note id field is incremented based on last note in DB. This is to prevent duplicates. All note DBs start at id 1.
         * title requires at least 3 characters for note creation
         * body can be blank - sometimes you just need a placeholder note
@@ -123,6 +123,6 @@
         * For the url, enter `localhost:5000/api/notes` - we want to delete all notes.
         * Click "Send"
         * You should see `[]` the newly cleaned database, in the response
-        
+
 ## Stopping the Server
 * In both the server app terminal press the CTRL and C keys at the same time (or CMD and C for Mac). Press again if necessary to stop all processes on the terminal. You may also attempt to close/kill the terminal application to stop the process.
