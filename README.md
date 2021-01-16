@@ -44,11 +44,11 @@
 ## Test the API
 ### PART 1: Create a Note
 1. In the Postman App, open a new tab.
-2. Set the method to `POST`
+2. The default method is `GET` - change this to `POST`
 3. For the request url, enter `localhost:5000/api/notes`
 4. Select the Body tab
 5. Click the "raw" radio button for type
-6. Ensure JSON is selected as the content type in the dropdown
+6. To the far right of all the radio buttons (next to GraphQL) is a dropdown, ensure JSON is selected
 7. Enter new note data in the Body text box as follows:
 ```
 {
@@ -119,11 +119,11 @@
 ### PART 4: Updating a note
 Let's update our note from PART 1:
 1. In the Postman App, open a new tab.
-2. Set the method to `PUT`
-3. For the request url, enter `localhost:5000/api/notes/1` - we want to update note id 1.
-4. Select the Body tab 
+2. The default method is `GET` - change this to `PUT`
+3. For the request url, enter `localhost:5000/api/notes/1` - we want to update note ID 1
+4. Select the Body tab
 5. Click the "raw" radio button for type
-6. Ensure JSON is selected as the content type in the dropdown
+6. To the far right of all the radio buttons (next to GraphQL) is a dropdown, ensure JSON is selected
 7. Enter new note data in the Body text box as follows:
 ```
 {
