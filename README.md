@@ -23,107 +23,131 @@
     * Launch the app and sign in.
 3. Clone or Download this repo from Github
 4. Install node modules:
-    * In a terminal or command prompt window, navigate to the root of this repo (e.g. C:/NotesApi)
+    * In a terminal window, navigate to the root of this repo (e.g. C:/NotesApi)
     * Run `npm install`
 6. Run the Server:
-    * In the terminal or command prompt window (see step 2), run the node server `node server.js`
+    * In the terminal, to run the node server, type `node server.js`
+    * Windows machines may show a modal to ask for permission for the server to access the network - click OK
     * If all goes well you should see `Listening on port 5000`
 
-
 ## Test the API
-1. Create a Note
-    * In the Postman App, open a new tab.
-    * Set the method to `POST`
-    * For the url, enter `localhost:5000/api/notes`
-    * Select the Body tab
-    * Click the "raw" radio button for type
-    * Ensure JSON is selected as the content type in the dropdown
-    * Enter new note data in the Body text box as follows:
-    `{
-        "title": "A new note",
-        "body": "This is a wonderful note"
-    }`
-    * Click "Send"
-    * You should see the following in the response:
-    `{
-    "title": "A fresh new Note",
-    "body": "Testing 2 - id 5",
+### PART 1: Create a Note
+1. In the Postman App, open a new tab.
+2. Set the method to `POST`
+3. For the request url, enter `localhost:5000/api/notes`
+4. Select the Body tab
+5. Click the "raw" radio button for type
+6. Ensure JSON is selected as the content type in the dropdown
+7. Enter new note data in the Body text box as follows:
+```
+{
+    "title": "A new note",
+    "body": "This is a wonderful note"
+}
+```
+8. Click "Send"
+9. You should see the following in the response:
+```
+{
+    "title": "A new note",
+    "body": "This is a wonderful note",
     "id": 1
-    }`
-    * Add a few more notes by changing the title and body data.
-2. Getting a specific note
-    * Now that we've created a note, let's retrieve it. You can retrieve specific notes by id through the route `/api/notes/{id}`
-    * We know the id of the note we created in step 1 is 1, so we'll look at `/api/notes/1` to get our note.
-    * Since this is just a GET request, you can do this through the browser or the Postman app.
+}
+```
+10. You have successfully added a note. Add a few more notes by following PART 1 again and changing the title and body data.
+
+### PART 2: Getting a specific note
+1. Now that we've created a note, let's retrieve it.
+    * You can retrieve specific notes by id through the route `/api/notes/{id}`
+2. We know the id of the note we created in PART 1 is 1, so we'll look at `/api/notes/1` to get our note.
+3. Since this is just a GET request, you can do this through the browser or the Postman app.
     * BROWSER:
-        * In a browser type `http://localhost:5000/api/notes/1`
-        * Depending on the browser, the result should be:
-        `{"title":"A fresh new Note","body":"Testing 2 - id 5","id":1}`
+        1. In a browser type `http://localhost:5000/api/notes/1`
+        2. Depending on the browser, the result should be something like:
+        ```
+        {"title":"A new note","body":"This is a wonderful note","id":1}
+        ```
     * Postman:
         * In the Postman App, open a new tab.
         * Set the method to `GET`
-        * For the url, enter `localhost:5000/api/notes/1`
+        * For the request url, enter `localhost:5000/api/notes/1`
         * Click "Send"
         * You should see the following in the response:
-        `{
-        "title": "A fresh new Note",
-        "body": "Testing 2 - id 5",
-        "id": 1
-        }`
-3. Getting all Notes
-    * You can retreive all notes in the database through the route `/api/notes`
-    * Since this is just a GET request, you can do this through the browser or the Postman app.
+        ```
+        {
+            "title": "A fresh new Note",
+            "body": "Testing 2 - id 5",
+            "id": 1
+        }
+        ```
+
+### PART 3: Getting all Notes
+1. You can retreive all notes in the database through the route `/api/notes`
+2. Since this is just a GET request, you can do this through the browser or the Postman app.
     * BROWSER:
-        * In a browser type `http://localhost:5000/api/notes`
-        * Depending on the browser the result should be:
-        `[{"title":"A fresh new Note","body":"Testing 2 - id 5","id":1}]`
-        * If you see more entries, that just means you had fun making notes in step 1.
+        1. In a browser type `http://localhost:5000/api/notes`
+        2. Depending on the browser the result should be:
+        ```
+        [{"title":"A new note","body":"This is a wonderful note","id":1}]
+        ```
     * Postman:
         * In the Postman App, open a new tab.
         * Set the method to `GET`
-        * For the url, enter `localhost:5000/api/notes`
+        * For the request url, enter `localhost:5000/api/notes`
         * Click "Send"
         * You should see the following in the response:
-        `[{
+        ```
+        [{
         "title": "A fresh new Note",
         "body": "Testing 2 - id 5",
         "id": 1
-        }]`
-        * If you see more entries, that just means you had fun making notes in step 1.
-4. Updating a note
-    * Let's update our note from step 1:
-        * In the Postman App, open a new tab.
-        * Set the method to `PUT`
-        * For the url, enter `localhost:5000/api/notes/1` - we want to update note id 1.
-        * Select the Body tab 
-        * Click the "raw" radio button for type
-        * Ensure JSON is selected as the content type in the dropdown
-        * Enter new note data in the Body text box as follows:
-        `{
-            "title": "An updated note",
-            "body": "This wonderful note is now updated"
-        }`
-        * Click "Send"
-        * You should see the following in the response:
-        `{
-        "title": "An updated note",
-        "body": "This wonderful note is now updated",
-        "id": 1
-        }`
-5. Deleting a note
-    * We've decided to delete our note. We can do so through the DELETE route `/api/notes/{id}`
-    * In the Postman App, open a new tab.
-        * Set the method to `DELETE`
-        * For the url, enter `localhost:5000/api/notes/1` - we want to delete note id 1.
-        * Click "Send"
-        * You should see `note deleted` in the response
-6. Deleting all notes
-    * You may find it necessary to wipe out the database and start clean. You can do so through the DELETE route `/api/notes`
-    * In the Postman App, open a new tab.
-        * Set the method to `DELETE`
-        * For the url, enter `localhost:5000/api/notes` - we want to delete all notes.
-        * Click "Send"
-        * You should see `[]` the newly cleaned database, in the response
+        }]
+        ```
+3. If you see more entries, that just means you had fun making notes in step 1.
+
+### PART 4: Updating a note
+Let's update our note from PART 1:
+1. In the Postman App, open a new tab.
+2. Set the method to `PUT`
+3. For the request url, enter `localhost:5000/api/notes/1` - we want to update note id 1.
+4. Select the Body tab 
+5. Click the "raw" radio button for type
+6. Ensure JSON is selected as the content type in the dropdown
+7. Enter new note data in the Body text box as follows:
+```
+{
+    "title": "An updated note",
+    "body": "This wonderful note is now updated"
+}
+```
+7. Click "Send"
+8. You should see the following in the response:
+```
+{
+    "title": "An updated note",
+    "body": "This wonderful note is now updated",
+    "id": 1
+}
+```
+
+### PART 5: Deleting a note
+We can delete specific notes through the DELETE route `/api/notes/{id}`. Let's delete the note from PART 1.
+1. In the Postman App, open a new tab.
+2. Set the method to `DELETE`
+3. For the url, enter `localhost:5000/api/notes/1` - we want to delete note id 1.
+4. Click "Send"
+5. You should see `note deleted` in the response
+
+### PART 6: Deleting all notes
+You can delete all notes through the DELETE route `/api/notes`.
+1. In the Postman App, open a new tab.
+2. Set the method to `DELETE`
+3. For the url, enter `localhost:5000/api/notes` - we want to delete all notes.
+4. Click "Send"
+5. You should see `[]` in the response indicating the database is empty
 
 ## Stopping the Server
-* In both the server app terminal press the CTRL and C keys at the same time (or CMD and C for Mac). Press again if necessary to stop all processes on the terminal. You may also attempt to close/kill the terminal application to stop the process.
+* While developing, you may need to stop the server. In both the terminal window press the CTRL and C keys at the same time (or CMD and C for Mac). Press again if necessary to stop all processes on the terminal. You may also attempt to close/kill the terminal application to stop the process.
+
+## Conclusion
+We've walked through how to set up the server, stop the server and all the available CRUD operations. You can now hook this up to a handsome front end application for some serious note taking. Although I would advise swapping out lowdb for something more robust like MongoDB or an RDBMS like MySQL.
