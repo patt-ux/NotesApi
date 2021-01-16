@@ -22,8 +22,16 @@
     * Download the Postman app https://www.postman.com/downloads
     * Launch the app and sign up/sign in.
 3. Clone or Download this repo from Github
+    * In a terminal window, navigate to the folder you want to install this repo inti (e.g. C:/Projects)
+    * Clone the repo:
+    ```
+    git clone https://github.com/patt-ux/NotesApi.git
+    ```
 4. Install node modules:
-    * In a terminal window, navigate to the root of this repo (e.g. C:/NotesApi)
+    * In the terminal window, change to the root of this app:
+    ```
+    cd NotesApi
+    ```
     * Run `npm install`
 6. Run the Server:
     * In the terminal, to run the node server, type `node server.js`
