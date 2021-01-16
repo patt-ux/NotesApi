@@ -1,4 +1,5 @@
-# NotesAppApi
+# NotesApi
+## About this App
 * A no-frills, node based api for managing notes.
 * Built with Node, Express, LowDB to handle persisting and CRUD operations.
     * Each note has the properties id (integer), title (string), body (string):
