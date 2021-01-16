@@ -22,19 +22,22 @@
     * Download the Postman app https://www.postman.com/downloads
     * Launch the app and sign up/sign in.
 3. Clone or Download this repo from Github
-    * In a terminal window, navigate to the folder you want to install this repo inti (e.g. C:/Projects)
-    * Clone the repo:
-    ```
-    git clone https://github.com/patt-ux/NotesApi.git
-    ```
+    * To CLONE - you will need GIT
+        1. Install GIT (https://git-scm.com/downloads)
+        2. Once Git is installed, open a Command Prompt (Windows) or Terminal (MacOS)
+            * To open a Command Prompt on Windows, search for "CMD"
+            * To open a Terminal on MacOS, search for "Terminal"
+        3. In the Command Prompt/Terminal window, navigate to the folder you want to install this repo into
+        4. Clone the repo:
+        ```
+        git clone https://github.com/patt-ux/NotesApi.git
+        ```
+    * To Download, simply download the ZIP file for this repo and unzip it into the directory where you want it installed.
 4. Install node modules:
-    * In the terminal window, change to the root of this app:
-    ```
-    cd NotesApi
-    ```
+    * In the Command Prompt/Terminal window, navigate to where the app was cloned/unzipped to
     * Run `npm install`
 6. Run the Server:
-    * In the terminal, to run the node server, type `node server.js`
+    * In the Command Prompt/Terminal window, to run the node server, type `node server.js`
     * Windows machines may show a modal to ask for permission for the server to access the network - click OK
     * If all goes well you should see `Listening on port 5000`
 
@@ -155,7 +158,11 @@ You can delete all notes through the DELETE route `/api/notes`.
 5. You should see `[]` in the response indicating the database is empty
 
 ## Stopping the Server
-* While developing, you may need to stop the server. In the terminal window press the CTRL and C keys at the same time (or CMD and C for Mac). Press again if necessary to stop all processes on the terminal. You may also attempt to close/kill the terminal application to stop the process.
+* While developing, you may need to stop the server.
+* In COMMAND PROMPT windows press the CTRL and C keys at the same time.
+* In a Terminal Window press the Apple CMD and C keys at the same time. 
+* Press the keys again if necessary to stop all processes on the terminal.
+* You may also attempt to close/kill the terminal application to stop the process.
 
 ## Conclusion
 We've walked through how to set up the server, stop the server and all the available CRUD operations. You can now hook this up to a handsome front end application for some serious note taking. Although I would advise swapping out lowdb for something more robust like MongoDB or an RDBMS like MySQL.
